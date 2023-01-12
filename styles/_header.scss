@@ -1,0 +1,125 @@
+.header_container {
+  background-image: url("./../imgs/header/hero-bg.png");
+  background-size: cover;
+  color: white;
+
+  .header_container-items {
+    padding: 0 15px;
+
+    .header_container-items-menu {
+      display: flex;
+      img {
+        height: 35px;
+        width: 100px;
+        margin: 20px 0px;
+      }
+      img:last-child {
+        height: 25px;
+        width: 25px;
+        margin-left: auto;
+      }
+    }
+
+    h1 {
+      @include font-primary-heavy;
+      font-size: 35px;
+      margin: 1em 0;
+    }
+
+    p {
+      color: $footerTextColor;
+      font-size: 16px;
+      font-weight: bold;
+      line-height: 2;
+      margin-bottom: 1em;
+    }
+
+    button {
+      width: 100%;
+      margin: 0.5em 0;
+      text-align: center;
+      border: none;
+      border-radius: 25px;
+      padding: 15px 50px;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    button:last-child {
+      background-color: $btnBGColor;
+      color: white;
+    }
+  }
+
+  .header_container-images {
+    position: relative;
+    padding: 0;
+
+    img {
+      width: 100%;
+    }
+
+    #whiteBg {
+      position: absolute;
+      right: -47%;
+      top: -15%;
+    }
+
+    #card {
+      position: absolute;
+      right: -14%;
+      bottom: -10%;
+    }
+
+    #planet {
+      position: absolute;
+      left: 30%;
+      bottom: 55%;
+      width: 10%;
+    }
+
+    #tower1 {
+      position: absolute;
+      left: 13%;
+      bottom: -7%;
+      width: 14%;
+    }
+
+    #tower2 {
+      position: absolute;
+      right: 5%;
+      bottom: 8%;
+      width: 11%;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .header_container {
+    display: flex;
+
+    .header_container-items {
+      width: 70%;
+      margin: 0 200px;
+      margin-top: 50px;
+      .header_container-items-menu {
+        img:last-child {
+          visibility: hidden;
+        }
+      }
+
+      h1 {
+        font-size: 75px;
+      }
+
+      button {
+        width: auto;
+        margin-top: 30px;
+      }
+    }
+
+    .header_container-images {
+      width: 100%;
+    }
+  }
+}

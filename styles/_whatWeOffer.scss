@@ -1,0 +1,108 @@
+#whatWeOffer {
+  padding: 0 15px 50px 15px;
+  background-color: #f9fafe;
+  overflow: auto;
+
+  h1 {
+    @include font-secondary-italic;
+    font-size: 50px;
+    margin: 25px 0;
+  }
+
+  p {
+    margin: 10px 0;
+    @include font-primary-medium;
+    font-size: 15px;
+  }
+
+  button {
+    margin: 0.5em 0;
+    text-align: center;
+    border: none;
+    border-radius: 25px;
+    padding: 15px 50px;
+    font-weight: bold;
+    font-size: 18px;
+    background-color: #317ade;
+    color: white;
+  }
+  h4:first-child {
+    margin-top: 50px;
+    margin-bottom: 10px;
+    color: #317ade;
+    font-size: 15px;
+  }
+
+  #orange {
+    h4:first-child {
+      color: #f08c4a;
+    }
+    > img {
+      width: 275px;
+    }
+  }
+
+  #green {
+    h4:first-child {
+      color: #4acb8f;
+    }
+    > img {
+      width: 250px;
+    }
+  }
+
+  .whatWeOffer_container-card {
+    .whatWeOffer_container-card-icons {
+      padding: 20px 0;
+
+      img {
+        width: 40px;
+      }
+    }
+    img {
+      width: 160px;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .whatWeOffer_header {
+    width: 80%;
+    margin: auto;
+    display: flex;
+
+    div {
+      position: relative;
+      width: 100%;
+
+      h1 {
+        font-size: 90px !important;
+        line-height: 0.75;
+      }
+
+      button {
+        position: absolute;
+        right: 0;
+      }
+    }
+  }
+
+  .whatWeOffer_container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+
+    .whatWeOffer_container-card {
+      width: 100%;
+      transition: 0.25s transform;
+
+      h4:nth-child(2) {
+        margin: 25px 0;
+      }
+    }
+
+    .whatWeOffer_container-card:hover {
+      transform: scale(1.05);
+    }
+  }
+}

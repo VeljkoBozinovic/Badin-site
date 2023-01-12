@@ -1,0 +1,23 @@
+@import "config";
+@import "media";
+@import "header";
+@import "clients";
+@import "whyBadin";
+@import "whatWeOffer";
+@import "words";
+@import "job";
+@import "career";
+@import "gallery";
+@import "expertise";
+@import "info";
+@import "footer";
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}

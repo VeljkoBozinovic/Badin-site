@@ -1,0 +1,27 @@
+#info {
+  padding: 50px 15px;
+  .info_shadow {
+    color: #f0f1f4;
+    font-size: 65px;
+    font-weight: bold;
+    line-height: 0.75;
+  }
+
+  h1 {
+    @include font-secondary-italic;
+    font-size: 40px;
+    margin-top: -20px;
+  }
+
+  a {
+    display: inline-block;
+    color: black;
+    font-size: 35px;
+    font-weight: bold;
+    margin: 50px 0;
+  }
+
+  img {
+    width: 100%;
+  }
+}

@@ -1,0 +1,65 @@
+#whyBadin {
+  padding: 0 15px 50px 15px;
+
+  h1 {
+    @include font-secondary-italic;
+    font-size: 55px;
+    margin-bottom: 25px;
+  }
+
+  p {
+    margin: 25px 0;
+    @include font-primary-medium;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 0 20px gray;
+  }
+
+  #onlyDesktop {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #whyBadin {
+    padding-left: 400px;
+
+    .whyBadin-first_set {
+      margin-top: 70px;
+      display: flex;
+
+      h1 {
+        margin: 0;
+        font-size: 90px;
+      }
+
+      p {
+        width: 70%;
+        margin: 50px 0 0 40px;
+      }
+    }
+
+    .whyBadin-second_set {
+      display: flex;
+      margin-top: 35px;
+
+      div {
+        width: 100%;
+
+        p {
+          width: 80%;
+        }
+      }
+    }
+
+    #onlyDesktop {
+      display: block;
+      width: 50%;
+    }
+  }
+}
