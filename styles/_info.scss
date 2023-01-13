@@ -25,3 +25,28 @@
     width: 100%;
   }
 }
+
+@media only screen and (min-width: 768px) {
+  #info {
+    width: 80%;
+    margin: auto;
+    position: relative;
+
+    .info_shadow {
+      font-size: 120px;
+    }
+
+    h1 {
+      font-size: 90px;
+      line-height: 0.75;
+      width: 70%;
+    }
+
+    .info_image {
+      position: absolute;
+      width: 420px;
+      right: 0;
+      bottom: 0;
+    }
+  }
+}

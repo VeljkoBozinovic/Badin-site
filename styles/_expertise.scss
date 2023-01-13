@@ -11,7 +11,7 @@
   .expertise_container {
     .expertise_container-items {
       display: flex;
-      margin: 30px 0;
+      margin: 50px 0;
 
       span {
         margin-right: 25px;
@@ -21,31 +21,35 @@
         font-weight: bold;
       }
     }
-    #slide {
-      animation: slide 65s linear infinite alternate;
-      @keyframes slide {
-        from {
-        }
-
-        to {
-          transform: translate(-210%);
-        }
-      }
+    .slide {
+      animation: slide 10s linear infinite alternate;
     }
 
-    #slide-reverse {
-      animation: slide-reverse 65s linear infinite alternate;
-      @keyframes slide-reverse {
-        from {
-          transform: translate(-210%);
-        }
-
-        to {
-        }
-      }
+    .slide-reverse {
+      animation: slide-reverse 10s linear infinite alternate;
     }
   }
 }
 
 @media only screen and (min-width: 768px) {
+  #expertise {
+    h1 {
+      text-align: center;
+      font-size: 80px;
+    }
+
+    .expertise_container {
+      .slide {
+        animation-duration: 50s;
+      }
+
+      .slide-reverse {
+        animation-duration: 50s;
+      }
+
+      .onlyMobile {
+        display: none;
+      }
+    }
+  }
 }
