@@ -434,6 +434,9 @@
     margin: 20px 0;
   }
   #words > div .words-tabs .words-tabs-item #text1 {
+    opacity: 0;
+  }
+  #words > div .words-tabs .words-tabs-item #text1 {
     -webkit-animation: text1 10s infinite;
             animation: text1 10s infinite;
   }
