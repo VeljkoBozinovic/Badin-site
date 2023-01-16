@@ -314,7 +314,7 @@
   align-items: flex-end;
 }
 #words .words-tabs .words-tabs-images .words-tabs-images-item img {
-  width: 80px;
+  width: 95px;
 }
 #words .words-tabs .words-tabs-images .words-tabs-images-item #selected {
   width: 105px;
@@ -357,6 +357,9 @@
     position: absolute;
     height: 100%;
   }
+  #words > div .words-tabs .words-tabs-images .words-tabs-images-item #selected {
+    width: 95px;
+  }
   #words > div .words-tabs .words-tabs-images #image1 {
     left: 45%;
     top: 0;
@@ -398,7 +401,7 @@
     background-color: white;
     width: 10px;
     height: 10px;
-    margin: -4px;
+    margin: -3.5px;
     border: 1px solid gray;
     border-radius: 50%;
   }
