@@ -21,3 +21,39 @@ html,
 body {
   overflow-x: hidden;
 }
+
+.menu {
+  display: none;
+}
+
+@media only screen and(min-width:768px) {
+  .menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    rotate: (-90deg);
+    margin: 15px;
+
+    &-hamburger {
+      display: flex;
+      justify-content: center;
+
+      &-item {
+        background-color: white;
+        width: 2px;
+        height: 15px;
+        margin: 2px;
+      }
+    }
+
+    &-text {
+      text-align: center;
+      color: white;
+      margin: 10px;
+    }
+  }
+}

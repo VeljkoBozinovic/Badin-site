@@ -1,7 +1,64 @@
+//Header
+@keyframes logoUp {
+  0% {
+    transform: translateY(50px);
+  }
+}
+
+@keyframes titleUp {
+  20% {
+    transform: translateY(50px);
+  }
+}
+
+@keyframes textUp {
+  40% {
+    transform: translateY(50px);
+  }
+}
+
+@keyframes buttonUp {
+  60% {
+    transform: translateY(50px);
+  }
+}
+
+@keyframes imgLeft {
+  20% {
+    transform: translate(50px);
+  }
+}
 //trusted by
 @keyframes infiniteSlide {
   to {
     transform: translateX(-680%);
+  }
+}
+
+@keyframes group1Appear {
+  33% {
+    opacity: 1;
+  }
+  66% {
+    opacity: 0;
+  }
+}
+
+@keyframes group2Appear {
+  66% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes group3Appear {
+  0% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 0;
   }
 }
 //expertise
@@ -331,5 +388,11 @@
 
   100% {
     opacity: 1;
+  }
+}
+//gallery
+@keyframes floatUp {
+  from {
+    transform: translateY(70px);
   }
 }

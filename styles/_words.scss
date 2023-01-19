@@ -8,11 +8,14 @@
     margin: 25px 0;
   }
 
-  > p {
-    margin: 25px 0;
-    @include font-primary-medium;
-    font-size: 15px;
-    color: $footerTextColor;
+  > div {
+    > p {
+      margin: 25px 0;
+      @include font-primary-medium;
+      font-size: 15px;
+      color: $footerTextColor;
+      margin: 10px;
+    }
   }
 
   .words-tabs {
@@ -31,6 +34,17 @@
       @include font-primary-medium-italic;
     }
 
+    &-arrows {
+      width: fit-content;
+      margin-left: auto;
+
+      img {
+        width: 30px;
+        background-color: black;
+        border-radius: 20px;
+      }
+    }
+
     .words-tabs-images {
       margin: 15px 0;
       display: flex;
@@ -38,12 +52,13 @@
 
       .words-tabs-images-item {
         img {
+          position: relative;
           width: 95px;
+          margin: 10px;
         }
-
-        #selected {
-          width: 105px;
-        }
+      }
+      #selected {
+        scale: 1.2;
       }
     }
 

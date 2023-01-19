@@ -26,6 +26,7 @@
       text-align: center;
       background-color: black;
       border-radius: 20px;
+      pointer-events: none;
 
       img {
         position: relative;
@@ -69,6 +70,29 @@
           }
         }
       }
+    }
+  }
+  .show {
+    animation: floatUp 1s;
+  }
+  .gallery-overview {
+    position: fixed;
+    background-color: rgba(#000, 0.7);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+
+    #displayedImg {
+      max-width: 700px;
+      max-height: 800px;
+      border-radius: 20px;
+      margin: 30px;
     }
   }
 }

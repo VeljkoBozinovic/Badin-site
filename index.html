@@ -8,6 +8,14 @@
     <title>Badin soft</title>
   </head>
   <body>
+    <div class="menu">
+      <div class="menu-hamburger">
+        <div class="menu-hamburger-item"></div>
+        <div class="menu-hamburger-item"></div>
+        <div class="menu-hamburger-item"></div>
+      </div>
+      <div class="menu-text">MENU</div>
+    </div>
     <section id="header">
       <div class="header_container">
         <div class="header_container-items">
@@ -151,21 +159,46 @@
           best minds in the business, here's what they have to say about us:
         </p>
         <div class="words-tabs">
+          <div class="words-tabs-arrows">
+            <img src="imgs/gallery/arrowLeft.png" class="mobileArrows" />
+            <img src="imgs/gallery/arrowRight.png" class="mobileArrows" />
+          </div>
           <div class="words-tabs-images">
             <div class="words-tabs-images-item" id="image1">
-              <img id="selected" src="imgs/trustedBy/karthik-rao.png" alt="" />
+              <img
+                id="selected"
+                src="imgs/trustedBy/karthik-rao.png"
+                alt=""
+                class="mobileImages"
+              />
             </div>
             <div class="words-tabs-images-item" id="image2">
-              <img src="imgs/trustedBy/dragan-andrejic.png" alt="" />
+              <img
+                src="imgs/trustedBy/dragan-andrejic.png"
+                alt=""
+                class="mobileImages"
+              />
             </div>
             <div class="words-tabs-images-item" id="image3">
-              <img src="imgs/trustedBy/fangsin-lim.png" alt="" />
+              <img
+                src="imgs/trustedBy/fangsin-lim.png"
+                alt=""
+                class="mobileImages"
+              />
             </div>
             <div class="words-tabs-images-item" id="image4">
-              <img src="imgs/trustedBy/geordie-lindsay.png" alt="" />
+              <img
+                src="imgs/trustedBy/geordie-lindsay.png"
+                alt=""
+                class="mobileImages"
+              />
             </div>
             <div class="words-tabs-images-item" id="image5">
-              <img src="imgs/trustedBy/nikola-ristovic.png" alt="" />
+              <img
+                src="imgs/trustedBy/nikola-ristovic.png"
+                alt=""
+                class="mobileImages"
+              />
             </div>
           </div>
           <div class="words-tabs-breakline">
@@ -323,7 +356,7 @@
           <p>Senior PHP Developer</p>
           <button>
             Apply
-            <img src="imgs/arrow.png" alt="asd" />
+            <img src="imgs/arrow.png" />
           </button>
         </div>
         <div class="career_btn">
@@ -333,24 +366,33 @@
     </section>
     <section id="gallery">
       <div class="gallery_container">
-        <div class="gallery_container-item">
+        <div class="gallery_container-item goup float-top">
           <div class="gallery_conatiner-item-image">
-            <img src="imgs/gallery/gallery-img-first.png" alt="" />
+            <img
+              src="imgs/gallery/gallery-img-first.png"
+              alt=""
+              id="gallery1"
+              class="displayImg"
+            />
             <div class="gallery_conatiner-item-image-overlay">
               <img src="imgs/gallery/zoom.png" alt="" />
             </div>
           </div>
           <div class="gallery_conatiner-item-image">
-            <img src="imgs/gallery/gallery-img-second.png" alt="" />
+            <img
+              src="imgs/gallery/gallery-img-second.png"
+              id="gallery2"
+              class="displayImg"
+            />
             <div class="gallery_conatiner-item-image-overlay">
               <img src="imgs/gallery/zoom.png" alt="" />
             </div>
           </div>
           <div class="gallery_conatiner-item-image" id="imgMoveLeft">
             <img
-              class="notOnMobile"
+              class="notOnMobile displayImg"
               src="imgs/gallery/gallery-img-third.jpg"
-              alt=""
+              id="gallery3"
             />
             <div class="gallery_conatiner-item-image-overlay">
               <img src="imgs/gallery/zoom.png" alt="" />
@@ -359,30 +401,44 @@
         </div>
         <div class="gallery_container-item">
           <div class="gallery_conatiner-item-image imgMoveDown">
-            <img src="imgs/gallery/gallery-img-fourth.png" alt="" />
+            <img
+              src="imgs/gallery/gallery-img-fourth.png"
+              alt=""
+              id="gallery4"
+              class="displayImg"
+            />
             <div class="gallery_conatiner-item-image-overlay">
               <img src="imgs/gallery/zoom.png" alt="" />
             </div>
           </div>
         </div>
-        <div class="gallery_container-item">
+        <div class="gallery_container-item float-top">
           <div class="gallery_conatiner-item-image">
             <img
-              class="notOnMobile"
+              class="notOnMobile displayImg"
               src="imgs/gallery/gallery-img-fifth.jpg"
-              alt=""
+              id="gallery5"
             />
             <div class="gallery_conatiner-item-image-overlay">
               <img src="imgs/gallery/zoom.png" alt="" />
             </div>
           </div>
           <div class="gallery_conatiner-item-image imgMoveDown">
-            <img src="imgs/gallery/gallery-img-sixth.png" alt="" />
+            <img
+              src="imgs/gallery/gallery-img-sixth.png"
+              id="gallery6"
+              class="displayImg"
+            />
             <div class="gallery_conatiner-item-image-overlay">
               <img src="imgs/gallery/zoom.png" alt="" />
             </div>
           </div>
         </div>
+      </div>
+      <div class="gallery-overview">
+        <img src="imgs/gallery/arrowLeft.png" class="arrows" />
+        <img id="displayedImg" src="" />
+        <img src="imgs/gallery/arrowRight.png" class="arrows" />
       </div>
     </section>
     <section id="expertise">
@@ -633,5 +689,6 @@
         </div>
       </div>
     </footer>
+    <script src="scripts/script.js"></script>
   </body>
 </html>
