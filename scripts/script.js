@@ -1,3 +1,14 @@
+//Menu
+var elMenu = document.querySelector(".menu-hamburger");
+var elMain = document.querySelector(".main");
+
+elMenu.onmouseover = function () {
+  elMain.className = "menu-hovered";
+};
+
+elMenu.onmouseout = function () {
+  elMain.className = "";
+};
 //Gallery animation
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {

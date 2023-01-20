@@ -305,7 +305,7 @@
   margin: 10px;
 }
 #words .words-tabs {
-  height: 400px;
+  height: 500px;
 }
 #words .words-tabs h3 {
   margin-bottom: 5px;
@@ -331,10 +331,17 @@
   background-color: #000;
   border-radius: 20px;
 }
+#words .words-tabs-quote-left {
+  display: none;
+}
+#words .words-tabs-quote-right {
+  display: none;
+}
 #words .words-tabs .words-tabs-images {
   margin: 15px 0;
   display: flex;
   align-items: flex-end;
+  width: 100%;
 }
 #words .words-tabs .words-tabs-images .words-tabs-images-item img {
   width: 95px;
@@ -368,14 +375,26 @@
     padding: 25px 0;
     width: 80%;
     margin: auto;
+    position: relative;
   }
   #words > div .words-tabs-arrows {
     display: none;
   }
+  #words > div .words-tabs-quote-left {
+    display: inherit;
+    position: absolute;
+    top: -20%;
+    right: 40%;
+  }
+  #words > div .words-tabs-quote-right {
+    display: inherit;
+    position: absolute;
+    bottom: 20%;
+    right: 0;
+  }
   #words > div .words-tabs .words-tabs-images {
     position: relative;
     margin: 0;
-    width: 400px;
   }
   #words > div .words-tabs .words-tabs-images .words-tabs-images-item {
     position: absolute;
@@ -449,7 +468,7 @@
   }
   #words > div .words-tabs .words-tabs-item {
     margin-left: 30px;
-    width: 400px;
+    width: 100%;
   }
   #words > div .words-tabs .words-tabs-item .words-tabs-item-card {
     display: flex;
@@ -1548,16 +1567,6 @@
     transform: translateY(70px);
   }
 }
-* {
-  margin: 0;
-  box-sizing: border-box;
-}
-
-html,
-body {
-  overflow-x: hidden;
-}
-
 .menu {
   display: none;
 }
@@ -1566,8 +1575,8 @@ body {
   .menu {
     position: fixed;
     left: 0;
-    top: 0;
-    bottom: 0;
+    top: 50%;
+    transform: translateX(50%);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1577,16 +1586,42 @@ body {
   .menu-hamburger {
     display: flex;
     justify-content: center;
+    align-items: flex-end;
+  }
+  .menu-hamburger:hover .menu-hamburger-item:first-child {
+    height: 25px;
+  }
+  .menu-hamburger:hover .menu-hamburger-item:nth-child(2) {
+    height: 30px;
   }
   .menu-hamburger-item {
     background-color: #fff;
     width: 2px;
     height: 15px;
     margin: 2px;
+    transition: 0.25s;
   }
   .menu-text {
     text-align: center;
     color: #fff;
     margin: 10px;
   }
+}
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  background-color: #317ade;
+}
+html main,
+body main {
+  background: #fff;
+}
+
+main.menu-hovered {
+  margin-left: 150px;
 }/*# sourceMappingURL=main.css.map */
