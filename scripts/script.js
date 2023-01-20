@@ -13,17 +13,25 @@ const elFloating = document.querySelectorAll(".float-top");
 elFloating.forEach((el) => observer.observe(el));
 
 //Gallery image preview
-
 if (window.innerWidth > 768) {
-  let elDisplayedImage = document.getElementById("displayedImg");
-  const elGalleryOverview = document.getElementsByClassName("gallery-overview");
-  const elImages = document.getElementsByClassName("displayImg");
-  const elArrows = document.getElementsByClassName("arrows");
+  let elDisplayedImage = document.querySelector("#displayedImg");
+  const elGalleryOverview = document.querySelectorAll(".gallery-overview");
+  const elImages = document.querySelectorAll(".displayImg");
+  const elArrows = document.querySelectorAll(".arrows");
   let currentImg;
 
   elGalleryOverview[0].addEventListener("click", () => {
     elGalleryOverview[0].style.cssText = "visibility: hidden;";
   });
+
+  for (let i = 0; i < elImages.length; i++) {
+    elImages[i].addEventListener("click", () => {
+      elDisplayedImage.setAttribute("src", elImages[i].getAttribute("src"));
+      elGalleryOverview[0].style.cssText = "visibility: visible;";
+      currentImg = i;
+      hideArrows();
+    });
+  }
 
   function hideArrows() {
     if (currentImg === 0) {
@@ -36,15 +44,6 @@ if (window.innerWidth > 768) {
       elArrows[0].style.cssText = "visibility: inherit;";
       elArrows[1].style.cssText = "visibility: inherit;";
     }
-  }
-
-  for (let i = 0; i < elImages.length; i++) {
-    elImages[i].addEventListener("click", () => {
-      elDisplayedImage.setAttribute("src", elImages[i].getAttribute("src"));
-      elGalleryOverview[0].style.cssText = "visibility: visible;";
-      currentImg = i;
-      hideArrows();
-    });
   }
 
   elArrows[0].addEventListener("click", (e) => {
@@ -67,30 +66,48 @@ if (window.innerWidth > 768) {
     e.stopPropagation();
   });
 }
+
 //Words
 const elMobArrows = document.querySelectorAll(".mobileArrows");
-const elMobImages = document.querySelectorAll(".mobileImages");
-let index = 0; //selected image
-let j = 0; //margin
+const elMobImages = document.querySelectorAll(".words-tabs-images-item");
+const elMobText = document.querySelectorAll(".words-tabs-item-card");
+let imgIndex = 0;
+let translateIndex = 0;
 
 elMobArrows[0].addEventListener("click", () => {
-  if (j < 0) {
-    j += 90;
-    index--;
+  if (translateIndex < 0) {
+    imgIndex--;
+    translateIndex += 100;
+
     for (let i = 0; i < elMobImages.length; i++) {
-      elMobImages[i].style.cssText =
-        index === i ? "scale: 1.2; left:" + j + "px" : "left:" + j + "px;";
+      if (imgIndex === i) {
+        elMobImages[i].style.cssText =
+          "transform: translateX(" + translateIndex + "%);";
+        elMobText[i].classList.add("visibleText");
+        elMobText[i + 1].classList.remove("visibleText");
+      } else {
+        elMobImages[i].style.cssText =
+          "transform: translateX(" + translateIndex + "%);";
+      }
     }
   }
 });
 
 elMobArrows[1].addEventListener("click", () => {
-  if (j > -360) {
-    j -= 90;
-    index++;
+  if (translateIndex > -400) {
+    imgIndex++;
+    translateIndex -= 100;
+
     for (let i = 0; i < elMobImages.length; i++) {
-      elMobImages[i].style.cssText =
-        index === i ? "scale: 1.2; left:" + j + "px" : "left:" + j + "px;";
+      if (imgIndex === i) {
+        elMobImages[i].style.cssText =
+          "transform: translateX(" + translateIndex + "%);";
+        elMobText[i].classList.add("visibleText");
+        elMobText[i - 1].classList.remove("visibleText");
+      } else {
+        elMobImages[i].style.cssText =
+          "transform: translateX(" + translateIndex + "%);";
+      }
     }
   }
 });

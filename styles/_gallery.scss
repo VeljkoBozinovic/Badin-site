@@ -9,7 +9,7 @@
       border-radius: 20px;
       width: 100%;
       vertical-align: top;
-      box-shadow: 5px 5px 15px gray;
+      box-shadow: $plainShadow $mycolorGray;
     }
 
     .notOnMobile {
@@ -19,12 +19,9 @@
       opacity: 0;
       transition: 0.75s opacity;
       position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
+      inset: 0;
       text-align: center;
-      background-color: black;
+      background-color: $myColorBlack;
       border-radius: 20px;
       pointer-events: none;
 
@@ -77,11 +74,8 @@
   }
   .gallery-overview {
     position: fixed;
-    background-color: rgba(#000, 0.7);
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    background-color: rgba($myColorBlack, 0.7);
+    inset: 0;
     z-index: 1;
     display: flex;
     justify-content: center;

@@ -43,7 +43,7 @@ body {
       justify-content: center;
 
       &-item {
-        background-color: white;
+        background-color: $myColorWhite;
         width: 2px;
         height: 15px;
         margin: 2px;
@@ -52,7 +52,7 @@ body {
 
     &-text {
       text-align: center;
-      color: white;
+      color: $myColorWhite;
       margin: 10px;
     }
   }

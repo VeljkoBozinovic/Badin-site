@@ -1,7 +1,7 @@
 .header_container {
   background-image: url("./../imgs/header/hero-bg.png");
   background-size: cover;
-  color: white;
+  color: $myColorWhite;
 
   .header_container-items {
     padding: 0 15px;
@@ -53,7 +53,7 @@
 
     button:last-child {
       background-color: $btnBGColor;
-      color: white;
+      color: $myColorWhite;
     }
   }
 

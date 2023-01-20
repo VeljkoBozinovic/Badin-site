@@ -244,75 +244,75 @@
 
 @keyframes circle1color {
   0% {
-    background-color: white;
+    background-color: $myColorWhite;
   }
   20% {
-    background-color: blue;
+    background-color: $myColorBlue;
   }
 
   40% {
-    background-color: white;
+    background-color: $myColorWhite;
   }
 }
 
 @keyframes circle2color {
   0% {
-    background-color: blue;
+    background-color: $myColorBlue;
   }
   20% {
-    background-color: white;
+    background-color: $myColorWhite;
   }
 
   80% {
-    background-color: white;
+    background-color: $myColorWhite;
   }
   100% {
-    background-color: blue;
+    background-color: $myColorBlue;
   }
 }
 
 @keyframes circle3color {
   0% {
-    background-color: white;
+    background-color: $myColorWhite;
   }
 
   60% {
-    background-color: white;
+    background-color: $myColorWhite;
   }
 
   80% {
-    background-color: blue;
+    background-color: $myColorBlue;
   }
   100% {
-    background-color: white;
+    background-color: $myColorWhite;
   }
 }
 
 @keyframes circle4color {
   40% {
-    background-color: white;
+    background-color: $myColorWhite;
   }
 
   60% {
-    background-color: blue;
+    background-color: $myColorBlue;
   }
 
   80% {
-    background-color: white;
+    background-color: $myColorWhite;
   }
 }
 
 @keyframes circle5color {
   20% {
-    background-color: white;
+    background-color: $myColorWhite;
   }
 
   40% {
-    background-color: blue;
+    background-color: $myColorBlue;
   }
 
   60% {
-    background-color: white;
+    background-color: $myColorWhite;
   }
 }
 

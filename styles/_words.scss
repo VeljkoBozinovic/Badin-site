@@ -1,6 +1,6 @@
 #words {
   padding: 50px 0 50px 15px;
-  background-color: #f9fafe;
+  background-color: $whatWeOfferBg;
 
   h1 {
     @include font-secondary-italic;
@@ -36,11 +36,12 @@
 
     &-arrows {
       width: fit-content;
+      margin-right: 15px;
       margin-left: auto;
 
       img {
         width: 30px;
-        background-color: black;
+        background-color: $myColorBlack;
         border-radius: 20px;
       }
     }
@@ -52,13 +53,9 @@
 
       .words-tabs-images-item {
         img {
-          position: relative;
           width: 95px;
-          margin: 10px;
+          margin: 15px;
         }
-      }
-      #selected {
-        scale: 1.2;
       }
     }
 
@@ -71,7 +68,7 @@
         opacity: 0;
       }
 
-      #text1 {
+      .visibleText {
         opacity: 1;
       }
     }
@@ -98,6 +95,10 @@
         width: 80%;
         margin: auto;
 
+        &-arrows {
+          display: none;
+        }
+
         .words-tabs-images {
           position: relative;
           margin: 0;
@@ -106,10 +107,6 @@
           .words-tabs-images-item {
             position: absolute;
             height: 100%;
-
-            #selected {
-              width: 95px;
-            }
           }
 
           #image1 {
@@ -144,18 +141,19 @@
         }
 
         .words-tabs-breakline {
-          background-color: gray;
+          background-color: $myColorBlue;
           width: 3px;
           display: flex;
           flex-direction: column;
           justify-content: space-around;
+          margin: 15px;
 
           .words-tabs-breakline-circle {
-            background-color: white;
+            background-color: $myColorWhite;
             width: 10px;
             height: 10px;
-            margin: -3.5px;
-            border: 1px solid gray;
+            margin: -3px;
+            border: $plainBorder $myColorBlue;
             border-radius: 50%;
           }
 

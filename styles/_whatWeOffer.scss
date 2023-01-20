@@ -1,6 +1,6 @@
 #whatWeOffer {
   padding: 0 15px 50px 15px;
-  background-color: #f9fafe;
+  background-color: $whatWeOfferBg;
   overflow: auto;
 
   h1 {
@@ -23,19 +23,19 @@
     padding: 15px 50px;
     font-weight: bold;
     font-size: 18px;
-    background-color: #317ade;
-    color: white;
+    background-color: $myColorBlue;
+    color: $myColorWhite;
   }
   h4:first-child {
     margin-top: 50px;
     margin-bottom: 10px;
-    color: #317ade;
+    color: $myColorBlue;
     font-size: 15px;
   }
 
   #orange {
     h4:first-child {
-      color: #f08c4a;
+      color: $myColorOrange;
     }
     > img {
       width: 275px;
@@ -44,7 +44,7 @@
 
   #green {
     h4:first-child {
-      color: #4acb8f;
+      color: $myColorGreen;
     }
     > img {
       width: 250px;
@@ -66,43 +66,44 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .whatWeOffer_header {
-    width: 80%;
-    margin: auto;
-    display: flex;
-
-    div {
-      position: relative;
-      width: 100%;
-
-      h1 {
-        font-size: 90px !important;
-        line-height: 0.75;
-      }
-
-      button {
-        position: absolute;
-        right: 0;
-      }
+  #whatWeOffer {
+    h1 {
+      font-size: 90px;
+      line-height: 0.75;
     }
-  }
+    .whatWeOffer_header {
+      width: 80%;
+      margin: auto;
+      display: flex;
 
-  .whatWeOffer_container {
-    width: 80%;
-    margin: auto;
-    display: flex;
+      div {
+        position: relative;
+        width: 100%;
 
-    .whatWeOffer_container-card {
-      width: 100%;
-      transition: 0.25s transform;
-
-      h4:nth-child(2) {
-        margin: 25px 0;
+        button {
+          position: absolute;
+          right: 0;
+        }
       }
     }
 
-    .whatWeOffer_container-card:hover {
-      transform: scale(1.05);
+    .whatWeOffer_container {
+      width: 80%;
+      margin: auto;
+      display: flex;
+
+      .whatWeOffer_container-card {
+        width: 100%;
+        transition: 0.25s transform;
+
+        h4:nth-child(2) {
+          margin: 25px 0;
+        }
+      }
+
+      .whatWeOffer_container-card:hover {
+        transform: scale(1.05);
+      }
     }
   }
 }

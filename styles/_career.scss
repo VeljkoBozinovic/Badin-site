@@ -1,9 +1,9 @@
 #career {
   padding: 25px 15px;
-  background-color: #f9fafe;
+  background-color: $myLightGray;
 
   .career_shadow {
-    color: #f0f1f4;
+    color: $myLightGray;
     font-size: 65px;
     font-weight: bold;
     line-height: 0.75;
@@ -17,9 +17,9 @@
 
   .career_container {
     margin: 20px 0;
-    background-color: white;
+    background-color: $myColorWhite;
     border-radius: 10px;
-    box-shadow: 0 0 20px #f0f1f4;
+    box-shadow: $plainShadow $myLightGray;
     padding: 15px;
 
     p {
@@ -35,8 +35,8 @@
       padding: 15px 50px;
       font-weight: bold;
       font-size: 15px;
-      background-color: #317ade;
-      color: white;
+      background-color: $myColorBlue;
+      color: $myColorWhite;
 
       img {
         vertical-align: bottom;
@@ -56,8 +56,8 @@
       padding: 15px 50px;
       font-weight: bold;
       font-size: 15px;
-      background-color: black;
-      color: white;
+      background-color: $myColorBlack;
+      color: $myColorWhite;
     }
   }
 }

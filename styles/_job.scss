@@ -8,7 +8,7 @@
   }
 
   .job_container-shadow_text {
-    color: #f0f1f4;
+    color: $myLightGray;
     font-size: 55px;
     font-weight: bold;
   }
@@ -27,18 +27,18 @@
     padding: 15px 50px;
     font-weight: bold;
     font-size: 18px;
-    background-color: #317ade;
-    color: white;
+    background-color: $myColorBlue;
+    color: $myColorWhite;
   }
 
   .job_trusted {
-    background-color: #f9fafe;
+    background-color: $whatWeOfferBg;
     padding: 50px 0;
     p {
       text-align: center;
       font-weight: bold;
       padding-bottom: 50px;
-      color: #6b728e;
+      color: $jobTrustedColor;
     }
 
     .job_trusted-images {
