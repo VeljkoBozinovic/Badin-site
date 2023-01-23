@@ -12,6 +12,7 @@
 @import "footer";
 @import "keyframes";
 @import "menu";
+@import "navigation";
 
 * {
   margin: 0;
@@ -22,6 +23,7 @@ html,
 body {
   overflow-x: hidden;
   background-color: $myColorBlue;
+  scroll-behavior: smooth;
 
   main {
     background: $myColorWhite;
@@ -29,5 +31,29 @@ body {
 }
 
 main.menu-hovered {
-  margin-left: 150px;
+  animation: menuReveal 0.25s linear forwards;
+}
+
+.back-to-top {
+  padding: 2px;
+  position: fixed;
+  right: 1em;
+  bottom: 1em;
+  border-radius: 100%;
+  border: 5px solid $myColorBlack;
+  opacity: 0;
+  transition: 0.5s opacity;
+
+  &-image {
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    background-color: $myColorBlack;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 20px;
+    }
+  }
 }

@@ -5,17 +5,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/main.css" />
+    <link rel="icon" href="imgs/logo-small.jpg" />
     <title>Badin soft</title>
   </head>
   <body>
     <main class="main">
-      <div class="menu">
+      <div class="menu changeColor">
         <div class="menu-hamburger">
           <div class="menu-hamburger-item"></div>
           <div class="menu-hamburger-item"></div>
           <div class="menu-hamburger-item"></div>
         </div>
         <div class="menu-text">MENU</div>
+      </div>
+      <div class="nav">
+        <div class="nav-exit">X</div>
+        <div class="nav-list">
+          <div class="nav-list-logo">
+            <img src="imgs/footer/logo.png" alt="logo" />
+          </div>
+          <ul>
+            <li><span class="nav-list-item"></span><a href="#">Home</a></li>
+            <li><span class="nav-list-item"></span><a href="#">About us</a></li>
+            <li><span class="nav-list-item"></span><a href="#">Services</a></li>
+            <li><span class="nav-list-item"></span><a href="#">Products</a></li>
+            <li><span class="nav-list-item"></span><a href="#">Careers</a></li>
+            <li><span class="nav-list-item"></span><a href="#">Blog</a></li>
+            <li><span class="nav-list-item"></span><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="nav-window">
+          <div class="nav-window-links">
+            <a href="#">
+              <img src="imgs/footer/linkedin.png" alt="linkedin" />
+            </a>
+            <a href="#">
+              <img src="imgs/footer/youtube.png" alt="youtube" />
+            </a>
+            <a href="#">
+              <img src="imgs/footer/spotify.png" alt="spotify" />
+            </a>
+            <a href="#">
+              <img src="imgs/footer/instagram.png" alt="instagram" />
+            </a>
+            <a href="#">
+              <img src="imgs/footer/facebook.png" alt="fb" />
+            </a>
+          </div>
+          <p>Nikole Pašića 28, IV floor, Niš, Serbia</p>
+          <a href="#">info@badin.rs</a>
+        </div>
       </div>
       <section id="header">
         <div class="header_container">
@@ -452,7 +491,7 @@
         <h1>Our expertise</h1>
         <div class="expertise_container">
           <div class="expertise_container-items slide-reverse">
-            <span>Machine Learning</span>
+            <span class="firstRibbonElement">Machine Learning</span>
             <span>CSS</span>
             <span>HTML</span>
             <span>Playwright</span>
@@ -493,10 +532,10 @@
             <span>PHP</span>
             <span>JavaScript</span>
             <span>Android</span>
-            <span>C#</span>
+            <span class="lastRibbonElement">C#</span>
           </div>
           <div class="expertise_container-items slide">
-            <span>C#</span>
+            <span class="firstRibbonElement">C#</span>
             <span>Android</span>
             <span>JavaScript</span>
             <span>PHP</span>
@@ -537,10 +576,10 @@
             <span>Playwright</span>
             <span>HTML</span>
             <span>CSS</span>
-            <span>Machine Learning</span>
+            <span class="lastRibbonElement">Machine Learning</span>
           </div>
           <div class="expertise_container-items onlyMobile slide">
-            <span>Machine Learning</span>
+            <span class="firstRibbonElement">Machine Learning</span>
             <span>CSS</span>
             <span>HTML</span>
             <span>Playwright</span>
@@ -581,10 +620,10 @@
             <span>PHP</span>
             <span>JavaScript</span>
             <span>Android</span>
-            <span>C#</span>
+            <span class="lastRibbonElement">C#</span>
           </div>
           <div class="expertise_container-items onlyMobile slide-reverse">
-            <span>Machine Learning</span>
+            <span class="firstRibbonElement">Machine Learning</span>
             <span>CSS</span>
             <span>HTML</span>
             <span>Playwright</span>
@@ -625,7 +664,7 @@
             <span>PHP</span>
             <span>JavaScript</span>
             <span>Android</span>
-            <span>C#</span>
+            <span class="lastRibbonElement">C#</span>
           </div>
         </div>
       </section>
@@ -696,6 +735,11 @@
           </div>
         </div>
       </footer>
+      <div class="back-to-top">
+        <div class="back-to-top-image">
+          <img src="imgs/up-arrow.png" alt="toTop" />
+        </div>
+      </div>
     </main>
     <script src="scripts/script.js"></script>
   </body>

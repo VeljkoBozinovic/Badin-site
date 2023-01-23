@@ -22,11 +22,11 @@
       }
     }
     .slide {
-      animation: slide 10s linear infinite alternate;
+      animation: slide-left 10s linear;
     }
 
     .slide-reverse {
-      animation: slide-reverse 10s linear infinite alternate;
+      animation: slide-right 10s linear;
     }
   }
 }
@@ -40,11 +40,11 @@
 
     .expertise_container {
       .slide {
-        animation-duration: 50s;
+        //animation-duration: 50s;
       }
 
       .slide-reverse {
-        animation-duration: 50s;
+        //animation-duration: 50s;
       }
 
       .onlyMobile {

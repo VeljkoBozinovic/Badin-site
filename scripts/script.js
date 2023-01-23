@@ -1,82 +1,97 @@
 //Menu
-var elMenu = document.querySelector(".menu-hamburger");
-var elMain = document.querySelector(".main");
+let elMenu = document.querySelector(".menu");
+let elMain = document.querySelector(".main");
 
 elMenu.onmouseover = function () {
-  elMain.className = "menu-hovered";
+  elMain.classList.add("menu-hovered");
 };
 
 elMenu.onmouseout = function () {
-  elMain.className = "";
+  elMain.classList.remove("menu-hovered");
 };
+
+const elHeader = document.querySelector("#header");
+const elExpertise = document.querySelector("#expertise");
+
+const observerMenu = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      elMenu.classList.toggle("changeColor", entry.isIntersecting);
+    });
+  },
+  { rootMargin: "-50%" }
+);
+
+observerMenu.observe(elHeader);
+observerMenu.observe(elExpertise);
+
 //Gallery animation
-const observer = new IntersectionObserver((entries) => {
+const observerGallery = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("show");
-    } else {
-      entry.target.classList.remove("show");
-    }
+    entry.target.classList.toggle("show", entry.isIntersecting);
   });
 });
 
 const elFloating = document.querySelectorAll(".float-top");
-elFloating.forEach((el) => observer.observe(el));
+elFloating.forEach((picture) => observerGallery.observe(picture));
 
 //Gallery image preview
-if (window.innerWidth > 768) {
-  let elDisplayedImage = document.querySelector("#displayedImg");
-  const elGalleryOverview = document.querySelectorAll(".gallery-overview");
-  const elImages = document.querySelectorAll(".displayImg");
-  const elArrows = document.querySelectorAll(".arrows");
-  let currentImg;
 
-  elGalleryOverview[0].addEventListener("click", () => {
-    elGalleryOverview[0].style.cssText = "visibility: hidden;";
-  });
+let elDisplayedImage = document.querySelector("#displayedImg");
+const elGalleryOverview = document.querySelectorAll(".gallery-overview");
+const elImages = document.querySelectorAll(".displayImg");
+const elArrows = document.querySelectorAll(".arrows");
+let currentImg;
 
-  for (let i = 0; i < elImages.length; i++) {
-    elImages[i].addEventListener("click", () => {
+elGalleryOverview[0].addEventListener("click", hideGalleryOverview);
+
+function hideGalleryOverview() {
+  elGalleryOverview[0].style.cssText = "visibility: hidden;";
+}
+
+for (let i = 0; i < elImages.length; i++) {
+  elImages[i].addEventListener("click", () => {
+    if (window.innerWidth >= 768) {
       elDisplayedImage.setAttribute("src", elImages[i].getAttribute("src"));
       elGalleryOverview[0].style.cssText = "visibility: visible;";
       currentImg = i;
       hideArrows();
-    });
-  }
-
-  function hideArrows() {
-    if (currentImg === 0) {
-      elArrows[0].style.cssText = "visibility: hidden;";
-      elArrows[1].style.cssText = "visibility: inherit;";
-    } else if (currentImg === 5) {
-      elArrows[0].style.cssText = "visibility: inherit;";
-      elArrows[1].style.cssText = "visibility: hidden;";
-    } else {
-      elArrows[0].style.cssText = "visibility: inherit;";
-      elArrows[1].style.cssText = "visibility: inherit;";
     }
-  }
-
-  elArrows[0].addEventListener("click", (e) => {
-    elDisplayedImage.setAttribute(
-      "src",
-      elImages[currentImg - 1].getAttribute("src")
-    );
-    currentImg -= 1;
-    hideArrows();
-    e.stopPropagation();
-  });
-
-  elArrows[1].addEventListener("click", (e) => {
-    elDisplayedImage.setAttribute(
-      "src",
-      elImages[currentImg + 1].getAttribute("src")
-    );
-    currentImg += 1;
-    hideArrows();
-    e.stopPropagation();
   });
 }
+
+elArrows[0].addEventListener("click", (e) => {
+  elDisplayedImage.setAttribute(
+    "src",
+    elImages[currentImg - 1].getAttribute("src")
+  );
+  currentImg -= 1;
+  hideArrows();
+  e.stopPropagation();
+});
+
+function hideArrows() {
+  if (currentImg === 0) {
+    elArrows[0].style.cssText = "visibility: hidden;";
+    elArrows[1].style.cssText = "visibility: inherit;";
+  } else if (currentImg === 5) {
+    elArrows[0].style.cssText = "visibility: inherit;";
+    elArrows[1].style.cssText = "visibility: hidden;";
+  } else {
+    elArrows[0].style.cssText = "visibility: inherit;";
+    elArrows[1].style.cssText = "visibility: inherit;";
+  }
+}
+
+elArrows[1].addEventListener("click", (e) => {
+  elDisplayedImage.setAttribute(
+    "src",
+    elImages[currentImg + 1].getAttribute("src")
+  );
+  currentImg += 1;
+  hideArrows();
+  e.stopPropagation();
+});
 
 //Words
 const elMobArrows = document.querySelectorAll(".mobileArrows");
@@ -121,4 +136,65 @@ elMobArrows[1].addEventListener("click", () => {
       }
     }
   }
+});
+
+//Expertise
+
+const elExpertiseRibbon = document.querySelector(".expertise_container-items");
+const elRibbonItemsFirst = document.querySelectorAll(".firstRibbonElement");
+const elRibbonItemsLast = document.querySelectorAll(".lastRibbonElement");
+
+const observerExpertise = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      //NE RADI!!!!
+      elExpertiseRibbon.classList.replace("slide", "slide-reverse");
+    }
+  });
+});
+
+elRibbonItemsFirst.forEach((client) => {
+  observerExpertise.observe(client);
+});
+
+//Back to top
+let backToTopBtn = document.querySelector(".back-to-top");
+
+window.onscroll = () => {
+  if (document.documentElement.scrollTop > 50) {
+    backToTopBtn.style.opacity = 1;
+  } else {
+    backToTopBtn.style.opacity = 0;
+  }
+
+  let currentLenght =
+    document.documentElement.scrollHeight -
+    document.documentElement.clientHeight;
+  let scrollCurrentY = Math.round(
+    (document.documentElement.scrollTop * 100) / currentLenght
+  );
+
+  backToTopBtn.style.background = `conic-gradient(#fff ${scrollCurrentY}%, #888 ${scrollCurrentY}%)`;
+};
+
+function scrollFunction() {}
+
+backToTopBtn.addEventListener("click", () => {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+});
+
+//responsiveReset
+window.addEventListener("resize", () => {
+  //galleryReset
+  hideGalleryOverview();
+  elDisplayedImage.setAttribute("src", "");
+  //wordsReset
+  imgIndex = 0;
+  translateIndex = 0;
+  for (let i = 0; i < elMobImages.length; i++) {
+    elMobImages[i].style.cssText = "transform: translateX(0);";
+    elMobText[i].classList.remove("visibleText");
+  }
+  elMobText[0].classList.add("visibleText");
 });

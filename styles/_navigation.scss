@@ -1,0 +1,41 @@
+.nav {
+  background: rgb(49, 122, 222);
+  background: radial-gradient(
+    circle,
+    rgba(49, 122, 222, 1) 43%,
+    rgba(31, 103, 199, 1) 100%
+  );
+  padding: 10em;
+  display: flex;
+
+  &-exit {
+    display: flex;
+    align-items: center;
+    margin-right: 5em;
+    color: $myColorWhite;
+  }
+
+  &-list {
+    &-logo {
+      img {
+        width: 100px;
+      }
+      margin-bottom: 7em;
+    }
+    ul {
+      padding: 0;
+      li {
+        list-style-type: none;
+        a {
+          color: $myColorWhite;
+          font-weight: bold;
+          font-size: 60px;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  &-window {
+    margin-left: auto;
+  }
+}
