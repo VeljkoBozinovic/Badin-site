@@ -22,16 +22,7 @@
 html,
 body {
   overflow-x: hidden;
-  background-color: $myColorBlue;
   scroll-behavior: smooth;
-
-  main {
-    background: $myColorWhite;
-  }
-}
-
-main.menu-hovered {
-  animation: menuReveal 0.25s linear forwards;
 }
 
 .back-to-top {

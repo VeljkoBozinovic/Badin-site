@@ -1,4 +1,4 @@
-.nav {
+.wrapper-nav {
   background: rgb(49, 122, 222);
   background: radial-gradient(
     circle,
@@ -38,4 +38,8 @@
   &-window {
     margin-left: auto;
   }
+}
+
+.nav-close {
+  display: none;
 }

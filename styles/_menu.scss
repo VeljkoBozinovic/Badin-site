@@ -3,6 +3,34 @@
 }
 
 @media only screen and (min-width: 768px) {
+  .wrapperOpened {
+    //animation: menuOpen 0.25 linear forwards;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-top: 100px solid $myColorBlue;
+    border-right: 100px solid $myColorBlue;
+    border-bottom: 100px solid $myColorBlue;
+    border-left: 1350px solid $myColorBlue;
+
+    .menu {
+      display: none;
+    }
+  }
+
+  .wrapper.menu-hovered {
+    animation: menuReveal 0.25s linear forwards;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
   .menu {
     position: fixed;
     left: 0;

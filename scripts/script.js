@@ -1,29 +1,35 @@
 //Menu
+let elWrapper = document.querySelector(".wrapper ");
 let elMenu = document.querySelector(".menu");
-let elMain = document.querySelector(".main");
 
 elMenu.onmouseover = function () {
-  elMain.classList.add("menu-hovered");
+  elWrapper.classList.add("menu-hovered");
 };
 
 elMenu.onmouseout = function () {
-  elMain.classList.remove("menu-hovered");
+  elWrapper.classList.remove("menu-hovered");
 };
+
+elMenu.addEventListener("click", () => {
+  elWrapper.classList.add("wrapperOpened");
+});
 
 const elHeader = document.querySelector("#header");
 const elExpertise = document.querySelector("#expertise");
 
-const observerMenu = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      elMenu.classList.toggle("changeColor", entry.isIntersecting);
-    });
-  },
-  { rootMargin: "-50%" }
-);
+addEventListener("DOMContentLoaded", () => {
+  const observerMenu = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        elMenu.classList.toggle("changeColor", entry.isIntersecting);
+      });
+    },
+    { rootMargin: "-50%" }
+  );
 
-observerMenu.observe(elHeader);
-observerMenu.observe(elExpertise);
+  observerMenu.observe(elExpertise);
+  observerMenu.observe(elHeader);
+});
 
 //Gallery animation
 const observerGallery = new IntersectionObserver((entries) => {
@@ -106,14 +112,13 @@ elMobArrows[0].addEventListener("click", () => {
     translateIndex += 100;
 
     for (let i = 0; i < elMobImages.length; i++) {
+      elMobImages[
+        i
+      ].style.cssText = `transform: translateX(${translateIndex}%);`;
+
       if (imgIndex === i) {
-        elMobImages[i].style.cssText =
-          "transform: translateX(" + translateIndex + "%);";
         elMobText[i].classList.add("visibleText");
         elMobText[i + 1].classList.remove("visibleText");
-      } else {
-        elMobImages[i].style.cssText =
-          "transform: translateX(" + translateIndex + "%);";
       }
     }
   }
@@ -125,37 +130,62 @@ elMobArrows[1].addEventListener("click", () => {
     translateIndex -= 100;
 
     for (let i = 0; i < elMobImages.length; i++) {
+      elMobImages[
+        i
+      ].style.cssText = `transform: translateX(${translateIndex}%);`;
+
       if (imgIndex === i) {
-        elMobImages[i].style.cssText =
-          "transform: translateX(" + translateIndex + "%);";
         elMobText[i].classList.add("visibleText");
         elMobText[i - 1].classList.remove("visibleText");
-      } else {
-        elMobImages[i].style.cssText =
-          "transform: translateX(" + translateIndex + "%);";
       }
     }
   }
 });
 
 //Expertise
+// const elExpertiseRibbon = document.querySelector(".expertise_container-items");
+// const elRibbonElements = document.querySelectorAll(".ribbonElement");
+// let ribbonElementsWidth = 0;
+// for (let i = 0; i < elRibbonElements.length; i++) {
+//   ribbonElementsWidth += elRibbonElements[i].offsetWidth;
+// }
+// const elRoot = document.querySelector(":root");
+// let jsWidths = elRoot.style.setProperty(
+//   "--widths",
+//   `-${ribbonElementsWidth}px`
+// );
+// const elRibbonItemsFirst = document.querySelectorAll(".firstRibbonElement");
+// const elRibbonItemsLast = document.querySelectorAll(".lastRibbonElement");
 
-const elExpertiseRibbon = document.querySelector(".expertise_container-items");
-const elRibbonItemsFirst = document.querySelectorAll(".firstRibbonElement");
-const elRibbonItemsLast = document.querySelectorAll(".lastRibbonElement");
+// const observerExpertiseFirst = new IntersectionObserver(
+//   (entries) => {
+//     entries.forEach((entry) => {
+//       if (entry.isIntersecting) {
+//         elExpertiseRibbon.classList.replace("slide-reverse", "slide");
+//       }
+//     });
+//   },
+//   { threshold: 1 }
+// );
 
-const observerExpertise = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      //NE RADI!!!!
-      elExpertiseRibbon.classList.replace("slide", "slide-reverse");
-    }
-  });
-});
+// elRibbonItemsFirst.forEach((element) => {
+//   observerExpertiseFirst.observe(element);
+// });
 
-elRibbonItemsFirst.forEach((client) => {
-  observerExpertise.observe(client);
-});
+// const observerExpertiseLast = new IntersectionObserver(
+//   (entries) => {
+//     entries.forEach((entry) => {
+//       if (entry.isIntersecting) {
+//         elExpertiseRibbon.classList.replace("slide", "slide-reverse");
+//       }
+//     });
+//   },
+//   { threshold: 1 }
+// );
+
+// elRibbonItemsLast.forEach((element) => {
+//   observerExpertiseLast.observe(element);
+// });
 
 //Back to top
 let backToTopBtn = document.querySelector(".back-to-top");

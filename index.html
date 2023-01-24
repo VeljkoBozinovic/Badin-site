@@ -10,50 +10,71 @@
   </head>
   <body>
     <main class="main">
-      <div class="menu changeColor">
-        <div class="menu-hamburger">
-          <div class="menu-hamburger-item"></div>
-          <div class="menu-hamburger-item"></div>
-          <div class="menu-hamburger-item"></div>
-        </div>
-        <div class="menu-text">MENU</div>
-      </div>
-      <div class="nav">
-        <div class="nav-exit">X</div>
-        <div class="nav-list">
-          <div class="nav-list-logo">
-            <img src="imgs/footer/logo.png" alt="logo" />
+      <div class="wrapper">
+        <div class="menu">
+          <div class="menu-hamburger">
+            <div class="menu-hamburger-item"></div>
+            <div class="menu-hamburger-item"></div>
+            <div class="menu-hamburger-item"></div>
           </div>
-          <ul>
-            <li><span class="nav-list-item"></span><a href="#">Home</a></li>
-            <li><span class="nav-list-item"></span><a href="#">About us</a></li>
-            <li><span class="nav-list-item"></span><a href="#">Services</a></li>
-            <li><span class="nav-list-item"></span><a href="#">Products</a></li>
-            <li><span class="nav-list-item"></span><a href="#">Careers</a></li>
-            <li><span class="nav-list-item"></span><a href="#">Blog</a></li>
-            <li><span class="nav-list-item"></span><a href="#">Contact</a></li>
-          </ul>
+          <div class="menu-text">MENU</div>
         </div>
-        <div class="nav-window">
-          <div class="nav-window-links">
-            <a href="#">
-              <img src="imgs/footer/linkedin.png" alt="linkedin" />
-            </a>
-            <a href="#">
-              <img src="imgs/footer/youtube.png" alt="youtube" />
-            </a>
-            <a href="#">
-              <img src="imgs/footer/spotify.png" alt="spotify" />
-            </a>
-            <a href="#">
-              <img src="imgs/footer/instagram.png" alt="instagram" />
-            </a>
-            <a href="#">
-              <img src="imgs/footer/facebook.png" alt="fb" />
-            </a>
+        <div class="wrapper-nav nav-close">
+          <div class="wrapper-nav-exit">X</div>
+          <div class="wrapper-nav-list">
+            <div class="wrapper-nav-list-logo">
+              <img src="imgs/footer/logo.png" alt="logo" />
+            </div>
+            <ul>
+              <li>
+                <span class="wrapper-nav-list-item"></span><a href="#">Home</a>
+              </li>
+              <li>
+                <span class="wrapper-nav-list-item"></span
+                ><a href="#">About us</a>
+              </li>
+              <li>
+                <span class="wrapper-nav-list-item"></span
+                ><a href="#">Services</a>
+              </li>
+              <li>
+                <span class="wrapper-nav-list-item"></span
+                ><a href="#">Products</a>
+              </li>
+              <li>
+                <span class="wrapper-nav-list-item"></span
+                ><a href="#">Careers</a>
+              </li>
+              <li>
+                <span class="wrapper-nav-list-item"></span><a href="#">Blog</a>
+              </li>
+              <li>
+                <span class="wrapper-nav-list-item"></span
+                ><a href="#">Contact</a>
+              </li>
+            </ul>
           </div>
-          <p>Nikole Pašića 28, IV floor, Niš, Serbia</p>
-          <a href="#">info@badin.rs</a>
+          <div class="wrapper-nav-window">
+            <div class="wrapper-nav-window-links">
+              <a href="#">
+                <img src="imgs/footer/linkedin.png" alt="linkedin" />
+              </a>
+              <a href="#">
+                <img src="imgs/footer/youtube.png" alt="youtube" />
+              </a>
+              <a href="#">
+                <img src="imgs/footer/spotify.png" alt="spotify" />
+              </a>
+              <a href="#">
+                <img src="imgs/footer/instagram.png" alt="instagram" />
+              </a>
+              <a href="#">
+                <img src="imgs/footer/facebook.png" alt="fb" />
+              </a>
+            </div>
+            <p>Nikole Pašića 28, IV floor, Niš, Serbia</p>
+            <a href="#">info@badin.rs</a>
+          </div>
         </div>
       </div>
       <section id="header">
@@ -490,49 +511,51 @@
       <section id="expertise">
         <h1>Our expertise</h1>
         <div class="expertise_container">
-          <div class="expertise_container-items slide-reverse">
-            <span class="firstRibbonElement">Machine Learning</span>
-            <span>CSS</span>
-            <span>HTML</span>
-            <span>Playwright</span>
-            <span>Cypress</span>
-            <span>Selenium</span>
-            <span>Tomcat</span>
-            <span>Phalcon</span>
-            <span>PL/SQL</span>
-            <span>Oracle Forms</span>
-            <span>SQL</span>
-            <span>Kubernetes</span>
-            <span>Hibernate</span>
-            <span>Flutter</span>
-            <span>Go</span>
-            <span>Figma</span>
-            <span>Docker</span>
-            <span>Jenkins</span>
-            <span>Amazon Web Services</span>
-            <span>MongoDB</span>
-            <span>Swift</span>
-            <span>Vue.js</span>
-            <span>.NET core</span>
-            <span>Hybris</span>
-            <span>TypeScript</span>
-            <span>ReactNative</span>
-            <span>WordPress</span>
-            <span>Spring Boot</span>
-            <span>Spring</span>
-            <span>MySQL</span>
-            <span>iOS</span>
-            <span>Java</span>
-            <span>Angular</span>
-            <span>ReactJS</span>
-            <span>NodeJS</span>
-            <span>.NET</span>
-            <span>Laravel</span>
-            <span>Symfony</span>
-            <span>PHP</span>
-            <span>JavaScript</span>
-            <span>Android</span>
-            <span class="lastRibbonElement">C#</span>
+          <div class="expertise_container-items slide">
+            <span class="ribbonElement firstRibbonElement"
+              >Machine Learning</span
+            >
+            <span class="ribbonElement">CSS</span>
+            <span class="ribbonElement">HTML</span>
+            <span class="ribbonElement">Playwright</span>
+            <span class="ribbonElement">Cypress</span>
+            <span class="ribbonElement">Selenium</span>
+            <span class="ribbonElement">Tomcat</span>
+            <span class="ribbonElement">Phalcon</span>
+            <span class="ribbonElement">PL/SQL</span>
+            <span class="ribbonElement">Oracle Forms</span>
+            <span class="ribbonElement">SQL</span>
+            <span class="ribbonElement">Kubernetes</span>
+            <span class="ribbonElement">Hibernate</span>
+            <span class="ribbonElement">Flutter</span>
+            <span class="ribbonElement">Go</span>
+            <span class="ribbonElement">Figma</span>
+            <span class="ribbonElement">Docker</span>
+            <span class="ribbonElement">Jenkins</span>
+            <span class="ribbonElement">Amazon Web Services</span>
+            <span class="ribbonElement">MongoDB</span>
+            <span class="ribbonElement">Swift</span>
+            <span class="ribbonElement">Vue.js</span>
+            <span class="ribbonElement">.NET core</span>
+            <span class="ribbonElement">Hybris</span>
+            <span class="ribbonElement">TypeScript</span>
+            <span class="ribbonElement">ReactNative</span>
+            <span class="ribbonElement">WordPress</span>
+            <span class="ribbonElement">Spring Boot</span>
+            <span class="ribbonElement">Spring</span>
+            <span class="ribbonElement">MySQL</span>
+            <span class="ribbonElement">iOS</span>
+            <span class="ribbonElement">Java</span>
+            <span class="ribbonElement">Angular</span>
+            <span class="ribbonElement">ReactJS</span>
+            <span class="ribbonElement">NodeJS</span>
+            <span class="ribbonElement">.NET</span>
+            <span class="ribbonElement">Laravel</span>
+            <span class="ribbonElement">Symfony</span>
+            <span class="ribbonElement">PHP</span>
+            <span class="ribbonElement">JavaScript</span>
+            <span class="ribbonElement">Android</span>
+            <span class="ribbonElement lastRibbonElement">C#</span>
           </div>
           <div class="expertise_container-items slide">
             <span class="firstRibbonElement">C#</span>
@@ -578,7 +601,7 @@
             <span>CSS</span>
             <span class="lastRibbonElement">Machine Learning</span>
           </div>
-          <div class="expertise_container-items onlyMobile slide">
+          <div class="expertise_container-items onlyMobile">
             <span class="firstRibbonElement">Machine Learning</span>
             <span>CSS</span>
             <span>HTML</span>
@@ -622,7 +645,7 @@
             <span>Android</span>
             <span class="lastRibbonElement">C#</span>
           </div>
-          <div class="expertise_container-items onlyMobile slide-reverse">
+          <div class="expertise_container-items onlyMobile">
             <span class="firstRibbonElement">Machine Learning</span>
             <span>CSS</span>
             <span>HTML</span>

@@ -31,9 +31,15 @@
 //menu
 @keyframes menuReveal {
   100% {
-    height: 89.2vh;
-    margin: 50px 0 50px 100px;
-    overflow: hidden;
+    border-top: 50px solid $myColorBlue;
+    border-bottom: 50px solid $myColorBlue;
+    border-left: 100px solid $myColorBlue;
+  }
+}
+
+@keyframes menuOpen {
+  100% {
+    //asdsa
   }
 }
 //trusted by
@@ -72,13 +78,13 @@
 //expertise
 @keyframes slide-left {
   to {
-    transform: translate(-500%);
+    transform: translateX(var(--widths));
   }
 }
 
 @keyframes slide-right {
   from {
-    transform: translate(-500%);
+    transform: translate(var(--widths));
   }
 }
 //words
