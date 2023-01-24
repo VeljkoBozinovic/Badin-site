@@ -1,6 +1,8 @@
 //Menu
 let elWrapper = document.querySelector(".wrapper ");
 let elMenu = document.querySelector(".menu");
+let elNav = document.querySelector(".nav-closed");
+let elClose = document.querySelector("#close-menu");
 
 elMenu.onmouseover = function () {
   elWrapper.classList.add("menu-hovered");
@@ -12,6 +14,14 @@ elMenu.onmouseout = function () {
 
 elMenu.addEventListener("click", () => {
   elWrapper.classList.add("wrapperOpened");
+  elNav.classList.add("nav");
+  elNav.classList.remove("nav-closed");
+});
+
+elClose.addEventListener("click", () => {
+  elWrapper.classList.remove("wrapperOpened");
+  elNav.classList.remove("nav");
+  elNav.classList.add("nav-closed");
 });
 
 const elHeader = document.querySelector("#header");

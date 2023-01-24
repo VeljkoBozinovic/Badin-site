@@ -28,20 +28,6 @@
     transform: translate(50px);
   }
 }
-//menu
-@keyframes menuReveal {
-  100% {
-    border-top: 50px solid $myColorBlue;
-    border-bottom: 50px solid $myColorBlue;
-    border-left: 100px solid $myColorBlue;
-  }
-}
-
-@keyframes menuOpen {
-  100% {
-    //asdsa
-  }
-}
 //trusted by
 @keyframes infiniteSlide {
   to {
