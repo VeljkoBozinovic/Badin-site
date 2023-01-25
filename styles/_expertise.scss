@@ -9,9 +9,14 @@
   }
 
   .expertise_container {
+    .items-container {
+      position: relative;
+      height: 100px;
+    }
     .expertise_container-items {
       display: flex;
       margin: 50px 0;
+      position: absolute;
 
       span {
         margin-right: 25px;
@@ -22,11 +27,11 @@
       }
     }
     .slide {
-      //animation: slide-left 10s linear;
+      animation: slide-left 30s linear infinite alternate;
     }
 
     .slide-reverse {
-      //animation: slide-right 10s linear;
+      animation: slide-left 30s linear infinite alternate-reverse;
     }
   }
 }
@@ -39,14 +44,6 @@
     }
 
     .expertise_container {
-      .slide {
-        //animation-duration: 50s;
-      }
-
-      .slide-reverse {
-        //animation-duration: 50s;
-      }
-
       .onlyMobile {
         display: none;
       }

@@ -1,3 +1,12 @@
+//Menu
+@keyframes menuList {
+  from {
+    background-size: 0%;
+  }
+  to {
+    background-size: 20%;
+  }
+}
 //Header
 @keyframes logoUp {
   0% {
@@ -64,13 +73,7 @@
 //expertise
 @keyframes slide-left {
   to {
-    transform: translateX(var(--widths));
-  }
-}
-
-@keyframes slide-right {
-  from {
-    transform: translate(var(--widths));
+    transform: translateX(calc(-100% + 100vw - 35px));
   }
 }
 //words

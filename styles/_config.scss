@@ -3,6 +3,8 @@ $myColorWhite: #fff;
 $mycolorGray: #888;
 $myLightGray: #f0f1f4;
 $myColorBlue: #317ade;
+$myDarkBlue: rgb(14, 52, 121);
+$myDarkBlueHover: rgba(14, 52, 121, 0.5);
 $myColorOrange: #f08c4a;
 $myColorGreen: #4acb8f;
 $jobTrustedColor: #6b728e;
@@ -14,10 +16,6 @@ $footerSocialBGcolor: #2c2d3c;
 
 $plainBorder: 1px solid;
 $plainShadow: 0 0 20px;
-
-:root {
-  --widths: 0px;
-}
 
 $font-weight-light: 300;
 $font-wight-regular: 400;

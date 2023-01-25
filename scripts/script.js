@@ -42,13 +42,19 @@ addEventListener("DOMContentLoaded", () => {
 });
 
 //Gallery animation
-const observerGallery = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    entry.target.classList.toggle("show", entry.isIntersecting);
-  });
-});
+const observerGallery = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      for (let i = 0; i < elGalleryVisible.length; i++) {
+        elGalleryVisible[i].classList.toggle("show", entry.isIntersecting);
+      }
+    });
+  },
+  { rootMargin: "50px" }
+);
 
-const elFloating = document.querySelectorAll(".float-top");
+const elGalleryVisible = document.querySelectorAll(".float-top");
+const elFloating = document.querySelectorAll(".gallery-visible");
 elFloating.forEach((picture) => observerGallery.observe(picture));
 
 //Gallery image preview
@@ -108,6 +114,15 @@ elArrows[1].addEventListener("click", (e) => {
   hideArrows();
   e.stopPropagation();
 });
+//Job trusted
+let elJobTrusted = document.querySelectorAll(".job_trusted-images-item");
+let currentlyDisplayedImages = [];
+
+for (let i = 0; i < 5; i++) {
+  //currentlyDisplayedImages[i] = elJobTrusted[i];
+  currentlyDisplayedImages[i] = elJobTrusted[i];
+}
+console.log(currentlyDisplayedImages);
 
 //Words
 const elMobArrows = document.querySelectorAll(".mobileArrows");
@@ -151,51 +166,6 @@ elMobArrows[1].addEventListener("click", () => {
     }
   }
 });
-
-//Expertise
-// const elExpertiseRibbon = document.querySelector(".expertise_container-items");
-// const elRibbonElements = document.querySelectorAll(".ribbonElement");
-// let ribbonElementsWidth = 0;
-// for (let i = 0; i < elRibbonElements.length; i++) {
-//   ribbonElementsWidth += elRibbonElements[i].offsetWidth;
-// }
-// const elRoot = document.querySelector(":root");
-// let jsWidths = elRoot.style.setProperty(
-//   "--widths",
-//   `-${ribbonElementsWidth}px`
-// );
-// const elRibbonItemsFirst = document.querySelectorAll(".firstRibbonElement");
-// const elRibbonItemsLast = document.querySelectorAll(".lastRibbonElement");
-
-// const observerExpertiseFirst = new IntersectionObserver(
-//   (entries) => {
-//     entries.forEach((entry) => {
-//       if (entry.isIntersecting) {
-//         elExpertiseRibbon.classList.replace("slide-reverse", "slide");
-//       }
-//     });
-//   },
-//   { threshold: 1 }
-// );
-
-// elRibbonItemsFirst.forEach((element) => {
-//   observerExpertiseFirst.observe(element);
-// });
-
-// const observerExpertiseLast = new IntersectionObserver(
-//   (entries) => {
-//     entries.forEach((entry) => {
-//       if (entry.isIntersecting) {
-//         elExpertiseRibbon.classList.replace("slide", "slide-reverse");
-//       }
-//     });
-//   },
-//   { threshold: 1 }
-// );
-
-// elRibbonItemsLast.forEach((element) => {
-//   observerExpertiseLast.observe(element);
-// });
 
 //Back to top
 let backToTopBtn = document.querySelector(".back-to-top");

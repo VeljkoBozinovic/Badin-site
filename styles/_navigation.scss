@@ -19,18 +19,45 @@
     &-logo {
       img {
         width: 100px;
+        margin-left: 25px;
       }
-      margin-bottom: 7em;
+      margin-bottom: 5em;
     }
     ul {
       padding: 0;
-      li {
-        list-style-type: none;
+    }
+    li {
+      list-style-type: none;
+
+      &:first-child {
         a {
-          color: $myColorWhite;
-          font-weight: bold;
-          font-size: 60px;
-          text-decoration: none;
+          background: linear-gradient(
+            to right,
+            $myDarkBlue 0%,
+            $myDarkBlue 30%,
+            transparent 30%,
+            transparent 100%
+          );
+          pointer-events: none;
+        }
+      }
+
+      a {
+        color: $myColorWhite;
+        font-weight: bold;
+        font-size: 60px;
+        text-decoration: none;
+        padding-left: 25px;
+
+        &:hover {
+          background: linear-gradient(
+              to right,
+              $myDarkBlueHover 0%,
+              $myDarkBlueHover 100%
+            )
+            no-repeat;
+          background-size: 20%;
+          animation: menuList 0.25s;
         }
       }
     }
