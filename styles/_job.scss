@@ -42,8 +42,11 @@
     }
 
     .job_trusted-images {
-      display: flex;
       animation: infiniteSlide 20s linear infinite;
+
+      .job_trusted-images-item {
+        display: none;
+      }
     }
   }
 }
@@ -73,6 +76,13 @@
       width: 20%;
 
       .job_trusted-images {
+        .currently-displayed-images {
+          display: block;
+          margin: auto;
+          margin-bottom: 15px;
+          opacity: 0;
+          animation: 5s imageJump;
+        }
         display: initial;
         img {
           display: block;

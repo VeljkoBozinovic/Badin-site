@@ -542,9 +542,11 @@
   color: #6b728e;
 }
 #job .job_trusted .job_trusted-images {
-  display: flex;
   -webkit-animation: infiniteSlide 20s linear infinite;
           animation: infiniteSlide 20s linear infinite;
+}
+#job .job_trusted .job_trusted-images .job_trusted-images-item {
+  display: none;
 }
 
 @media only screen and (min-width: 768px) {
@@ -571,6 +573,14 @@
   #job .job_trusted .job_trusted-images {
     display: initial;
   }
+  #job .job_trusted .job_trusted-images .currently-displayed-images {
+    display: block;
+    margin: auto;
+    margin-bottom: 15px;
+    opacity: 0;
+    -webkit-animation: 5s imageJump;
+            animation: 5s imageJump;
+  }
   #job .job_trusted .job_trusted-images img {
     display: block;
     margin: auto;
@@ -581,7 +591,7 @@
 }
 #career {
   padding: 25px 15px;
-  background-color: #f0f1f4;
+  background-color: #f9fafe;
 }
 #career .career_shadow {
   color: #f0f1f4;
@@ -1020,6 +1030,34 @@
     opacity: 1;
   }
   33% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes imageJump {
+  20% {
+    transform: translateY(25px);
+    opacity: 1;
+  }
+  80% {
+    transform: translateY(25px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 0;
+  }
+}
+@keyframes imageJump {
+  20% {
+    transform: translateY(25px);
+    opacity: 1;
+  }
+  80% {
+    transform: translateY(25px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0px);
     opacity: 0;
   }
 }

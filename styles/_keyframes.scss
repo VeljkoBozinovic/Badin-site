@@ -70,6 +70,21 @@
     opacity: 0;
   }
 }
+
+@keyframes imageJump {
+  20% {
+    transform: translateY(25px);
+    opacity: 1;
+  }
+  80% {
+    transform: translateY(25px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 0;
+  }
+}
 //expertise
 @keyframes slide-left {
   to {
