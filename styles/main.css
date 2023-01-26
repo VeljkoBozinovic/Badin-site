@@ -267,6 +267,7 @@
   #whatWeOffer .whatWeOffer_header div button {
     position: absolute;
     right: 0;
+    margin-top: 50px;
   }
   #whatWeOffer .whatWeOffer_container {
     width: 80%;
