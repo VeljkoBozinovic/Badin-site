@@ -544,9 +544,7 @@
 #job .job_trusted .job_trusted-images {
   -webkit-animation: infiniteSlide 20s linear infinite;
           animation: infiniteSlide 20s linear infinite;
-}
-#job .job_trusted .job_trusted-images .job_trusted-images-item {
-  display: none;
+  display: flex;
 }
 
 @media only screen and (min-width: 768px) {
@@ -572,6 +570,9 @@
   }
   #job .job_trusted .job_trusted-images {
     display: initial;
+  }
+  #job .job_trusted .job_trusted-images .job_trusted-images-item {
+    display: none;
   }
   #job .job_trusted .job_trusted-images .currently-displayed-images {
     display: block;
