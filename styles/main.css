@@ -240,6 +240,9 @@
 #whatWeOffer #green > img {
   width: 250px;
 }
+#whatWeOffer .whatWeOffer_container-card {
+  cursor: pointer;
+}
 #whatWeOffer .whatWeOffer_container-card .whatWeOffer_container-card-icons {
   padding: 20px 0;
 }
@@ -332,6 +335,9 @@
   background-color: #317ade;
   border-radius: 10px;
 }
+#words .words-tabs-arrows #left-arrow {
+  background-color: #888;
+}
 #words .words-tabs-quote-left {
   display: none;
 }
@@ -343,6 +349,9 @@
   display: flex;
   align-items: flex-end;
   width: 100%;
+}
+#words .words-tabs .words-tabs-images .words-tabs-images-item {
+  transition: 0.25s linear;
 }
 #words .words-tabs .words-tabs-images .words-tabs-images-item img {
   width: 95px;
@@ -400,6 +409,7 @@
   #words > div .words-tabs .words-tabs-images .words-tabs-images-item {
     position: absolute;
     height: 100%;
+    pointer-events: none;
   }
   #words > div .words-tabs .words-tabs-images #image1 {
     left: 45%;
@@ -678,6 +688,7 @@
 #gallery .gallery_conatiner-item-image {
   position: relative;
   margin-bottom: 20px;
+  cursor: pointer;
 }
 #gallery .gallery_conatiner-item-image img {
   border-radius: 20px;
@@ -1683,6 +1694,7 @@
     rotate: -90deg;
     margin: 15px;
     z-index: 10;
+    cursor: pointer;
   }
   .menu-hamburger {
     display: flex;
@@ -1734,7 +1746,9 @@
   display: flex;
   align-items: center;
   margin-right: 5em;
-  color: #fff;
+}
+.nav-exit img {
+  cursor: pointer;
 }
 .nav-list-logo {
   margin-bottom: 5em;
@@ -1778,6 +1792,11 @@ body {
   overflow-x: hidden;
 }
 
+button:hover {
+  filter: brightness(70%);
+  cursor: pointer;
+}
+
 .back-to-top {
   padding: 2px;
   position: fixed;
@@ -1787,6 +1806,7 @@ body {
   border: 5px solid #000;
   opacity: 0;
   transition: 0.5s opacity;
+  cursor: pointer;
 }
 .back-to-top-image {
   height: 40px;

@@ -45,7 +45,7 @@ addEventListener("DOMContentLoaded", () => {
   observerMenu.observe(elHeader);
 });
 
-//Gallery animation
+//Gallery
 const observerGallery = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
@@ -60,8 +60,6 @@ const observerGallery = new IntersectionObserver(
 const elGalleryVisible = document.querySelectorAll(".float-top");
 const elFloating = document.querySelectorAll(".gallery-visible");
 elFloating.forEach((picture) => observerGallery.observe(picture));
-
-//Gallery image preview
 
 let elDisplayedImage = document.querySelector("#displayedImg");
 const elGalleryOverview = document.querySelectorAll(".gallery-overview");
@@ -118,6 +116,7 @@ elArrows[1].addEventListener("click", (e) => {
   hideArrows();
   e.stopPropagation();
 });
+
 //Job trusted
 if (window.innerWidth > 768) {
   let arrayElJobTrusted = Array.from(
@@ -154,6 +153,7 @@ if (window.innerWidth > 768) {
     selectFive();
   }, 5000);
 }
+
 //Words
 const elMobArrows = document.querySelectorAll(".mobileArrows");
 const elMobImages = document.querySelectorAll(".words-tabs-images-item");
@@ -177,6 +177,11 @@ elMobArrows[0].addEventListener("click", () => {
       }
     }
   }
+
+  if (imgIndex === 0) {
+    elMobArrows[0].style.background = "#888";
+  }
+  elMobArrows[1].style.background = "#317ade";
 });
 
 elMobArrows[1].addEventListener("click", () => {
@@ -195,7 +200,36 @@ elMobArrows[1].addEventListener("click", () => {
       }
     }
   }
+
+  if (imgIndex === 4) {
+    elMobArrows[1].style.background = "#888";
+  }
+  elMobArrows[0].style.background = "#317ade";
 });
+
+for (let i = 0; i < elMobImages.length; i++) {
+  elMobImages[i].addEventListener("click", () => {
+    imgIndex = i;
+    translateIndex = -(imgIndex * 100);
+
+    for (let j = 0; j < elMobImages.length; j++) {
+      elMobImages[
+        j
+      ].style.cssText = `transform: translateX(${translateIndex}%);`;
+
+      if (imgIndex === j) {
+        elMobText[j].classList.add("visibleText");
+      } else {
+        elMobText[j].classList.remove("visibleText");
+      }
+    }
+
+    if (imgIndex === 4) {
+      elMobArrows[1].style.background = "#888";
+    }
+    elMobArrows[0].style.background = "#317ade";
+  });
+}
 
 //Back to top
 let backToTopBtn = document.querySelector(".back-to-top");

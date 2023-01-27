@@ -24,6 +24,11 @@ body {
   overflow-x: hidden;
 }
 
+button:hover {
+  filter: brightness(70%);
+  cursor: pointer;
+}
+
 .back-to-top {
   padding: 2px;
   position: fixed;
@@ -33,6 +38,7 @@ body {
   border: 5px solid $myColorBlack;
   opacity: 0;
   transition: 0.5s opacity;
+  cursor: pointer;
 
   &-image {
     height: 40px;

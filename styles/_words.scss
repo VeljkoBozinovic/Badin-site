@@ -44,6 +44,9 @@
         background-color: $myColorBlue;
         border-radius: 10px;
       }
+      #left-arrow {
+        background-color: $mycolorGray;
+      }
     }
 
     &-quote-left {
@@ -61,6 +64,7 @@
       width: 100%;
 
       .words-tabs-images-item {
+        transition: 0.25s linear;
         img {
           width: 95px;
           margin: 15px;
@@ -130,6 +134,7 @@
           .words-tabs-images-item {
             position: absolute;
             height: 100%;
+            pointer-events: none;
           }
 
           #image1 {

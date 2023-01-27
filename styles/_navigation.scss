@@ -12,7 +12,10 @@
     display: flex;
     align-items: center;
     margin-right: 5em;
-    color: $myColorWhite;
+
+    img {
+      cursor: pointer;
+    }
   }
 
   &-list {
