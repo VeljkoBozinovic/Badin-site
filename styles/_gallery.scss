@@ -89,5 +89,18 @@
       border-radius: 20px;
       margin: 30px;
     }
+
+    .arrows {
+      background-color: $mycolorGray;
+      border: 2px solid $myColorBlue;
+      border-radius: 25%;
+      width: 35px;
+      cursor: pointer;
+
+      &:hover {
+        transition: 0.2s;
+        scale: 1.1;
+      }
+    }
   }
 }

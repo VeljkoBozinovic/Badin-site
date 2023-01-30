@@ -763,6 +763,17 @@
     border-radius: 20px;
     margin: 30px;
   }
+  .gallery-overview .arrows {
+    background-color: #888;
+    border: 2px solid #317ade;
+    border-radius: 25%;
+    width: 35px;
+    cursor: pointer;
+  }
+  .gallery-overview .arrows:hover {
+    transition: 0.2s;
+    scale: 1.1;
+  }
 }
 #expertise {
   background-color: #317ade;
